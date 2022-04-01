@@ -4,6 +4,8 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 export const AddForm = () => {
   return (
     <div>
+      {/* Line 9 to 23 is copied from 
+        https://react-bootstrap.netlify.app/forms/layout/#layout Column Sizing  */}
       <Form>
         <Row>
           <Col xs={7}>
