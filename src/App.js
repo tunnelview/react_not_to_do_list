@@ -1,15 +1,15 @@
 // import logo from './logo.svg';
+import { Container } from "react-bootstrap";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
     <div className="wrapper">
-      <container>
+      <Container>
         {/* {title comp} */}
 
         {/* {form comp} */}
-      </container>
+      </Container>
     </div>
   );
 };
