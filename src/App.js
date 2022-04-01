@@ -2,8 +2,16 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  return <div> Hellow World</div>;
-}
+const App = () => {
+  return (
+    <div className="wrapper">
+      <container>
+        {/* {title comp} */}
+
+        {/* {form comp} */}
+      </container>
+    </div>
+  );
+};
 
 export default App;
