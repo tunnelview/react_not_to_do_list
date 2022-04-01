@@ -7,14 +7,14 @@ export const AddForm = () => {
       {/* Line 9 to 23 is copied from 
         https://react-bootstrap.netlify.app/forms/layout/#layout Column Sizing  */}
       <Form>
-        <Row>
-          <Col xs={7}>
+        <Row className="g-2">
+          <Col md={7}>
             <Form.Control placeholder="Task..." />
           </Col>
-          <Col>
+          <Col md={3}>
             <Form.Control placeholder="Hour" type="number" />
           </Col>
-          <Col>
+          <Col md={2}>
             <Button variant="primary" type="submit">
               Add Task
             </Button>
