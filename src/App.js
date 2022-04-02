@@ -7,13 +7,6 @@ import TaskList from "./components/task-list/TaskList";
 import { Title } from "./components/title/Title";
 
 const App = () => {
-  // state to strore allt he task lists
-  const [taskLists, setTaskLists] = useState([]);
-
-  const addToTaskList = (taskObj) => {
-    setTaskLists([...taskLists, taskObj]);
-  };
-
   return (
     <div className="wrapper">
       <Container>
@@ -21,7 +14,7 @@ const App = () => {
         <Title />
 
         {/* {form comp} */}
-        <AddForm addToTaskList={addToTaskList} />
+        <AddForm />
 
         <hr />
 
