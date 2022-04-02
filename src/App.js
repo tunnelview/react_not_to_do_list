@@ -2,8 +2,8 @@
 import { Container } from "react-bootstrap";
 import "./App.css";
 import { AddForm } from "./components/form/AddForm";
+import TaskList from "./components/task-list/TaskList";
 import { Title } from "./components/title/Title";
-import { TaskList } from "./components/task-list/TaskList";
 
 const App = () => {
   return (
@@ -13,11 +13,12 @@ const App = () => {
         <Title />
 
         {/* {form comp} */}
+        <AddForm />
 
         <hr />
 
         {/* {Task List comp} */}
-        <AddForm />
+        <TaskList />
       </Container>
     </div>
   );
