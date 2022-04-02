@@ -30,10 +30,6 @@ const TaskList = () => {
           </Table>
         </Col>
 
-        <Col md="6">Right</Col>
-      </Row>
-
-      <Row>
         <Col md="6">
           <h2 className="text-center"> Bad List</h2>
           <hr />
@@ -58,8 +54,6 @@ const TaskList = () => {
             </tbody>
           </Table>
         </Col>
-
-        <Col md="6">Right</Col>
       </Row>
     </div>
   );
