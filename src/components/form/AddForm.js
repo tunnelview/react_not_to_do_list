@@ -11,6 +11,7 @@ export const AddForm = () => {
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
+    // line 13 is to display the vlue and the field
 
     console.log(name, value);
   };
