@@ -4,7 +4,7 @@ import { Button, Col, Form, FormCheck, Row, Table } from "react-bootstrap";
 const BadList = () => {
   return (
     <div>
-      <h2 className="text-center"> Task List</h2>
+      <h2 className="text-center"> Bad List</h2>
       <hr />
 
       <Table striped hover>
@@ -16,12 +16,12 @@ const BadList = () => {
             <td> Task Name</td>
             <td>10 hr</td>
             <td className="text-end">
+              <Button variant="primary">
+                <i className="fa-solid fa-arrow-left-long"></i>
+              </Button>
               <Button variant="danger">
                 <i className="fa-solid fa-trash-can"></i>
               </Button>{" "}
-              <Button variant="primary">
-                <i className="fa-solid fa-arrow-right-long"></i>
-              </Button>
             </td>
           </tr>
         </tbody>
