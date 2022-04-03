@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Form, FormCheck, Row, Table } from "react-bootstrap";
 
-const TaskList = () => {
+const BadList = () => {
   return (
     <div>
       <h2 className="text-center"> Task List</h2>
@@ -26,8 +26,10 @@ const TaskList = () => {
           </tr>
         </tbody>
       </Table>
+
+      <h4 className="mt-4 text-danger">You could have saved: 20 hrs</h4>
     </div>
   );
 };
 
-export default TaskList;
+export default BadList;
