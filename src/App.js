@@ -33,7 +33,7 @@ const App = () => {
           </Col>
 
           <Col md="6">
-            <BadList />
+            <BadL ist />
           </Col>
         </Row>
 
