@@ -15,6 +15,13 @@ const App = () => {
   };
   console.log(taskList);
 
+  //remove item form the task
+  const removeFromTaskList = (i) => {
+    const filterdArg = taskList.filter((item, index) => index !== i);
+    setTaskList(filterdArg);
+    alert(i);
+  };
+
   return (
     <div className="wrapper">
       <Container>
@@ -29,11 +36,14 @@ const App = () => {
         {/* {Task List comp} */}
         <Row>
           <Col md="6">
-            <TaskList taskList={taskList} />
+            <TaskList
+              taskList={taskList}
+              removeFromTaskList={removeFromTaskList}
+            ></TaskList>
           </Col>
 
           <Col md="6">
-            <BadL ist />
+            <BadList />
           </Col>
         </Row>
 
