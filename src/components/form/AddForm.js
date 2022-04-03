@@ -12,19 +12,6 @@ export const AddForm = () => {
 
   //   const handleOnChange = (e) => {
   //     const { name, value } = e.target;
-  //     // line 13 is to display the vlue and the field
-  //     setTask({ ...newInfo, [name]: value });
-  //     // set task updates our state. the name above mentioned above is the variable,
-  //     // we key that in squared bracket, because we want to convert that into value.
-
-  //     console.log(name, value);
-  //   };
-  //   console.log(newInfo);
-
-  //   const handleOnSubmit = (e) => {
-  //     e.preventDefault();
-  //     console.log(newInfo);
-  //   };
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
@@ -34,6 +21,10 @@ export const AddForm = () => {
     });
   };
 
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    addToTaskList(newInfo);
+  };
   console.log(newInfo);
 
   return (

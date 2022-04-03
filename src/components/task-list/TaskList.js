@@ -9,21 +9,23 @@ const TaskList = () => {
 
       <Table striped hover>
         <tbody>
-          <tr>
-            <td>
-              <FormCheck type="checkbox" label="Check me out" />
-            </td>
-            <td> Task Name</td>
-            <td>10 hr</td>
-            <td className="text-end">
-              <Button variant="danger">
-                <i className="fa-solid fa-trash-can"></i>
-              </Button>{" "}
-              <Button variant="primary">
-                <i className="fa-solid fa-arrow-right-long"></i>
-              </Button>
-            </td>
-          </tr>
+          {TaskList.map((item, i) => (
+            <tr>
+              <td>
+                <FormCheck type="checkbox" label="Check me out" />
+              </td>
+              <td>{item.task}</td>
+              <td>{item.hr}</td>
+              <td className="text-end">
+                <Button variant="danger">
+                  <i className="fa-solid fa-trash-can"></i>
+                </Button>{" "}
+                <Button variant="primary">
+                  <i className="fa-solid fa-arrow-right-long"></i>
+                </Button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>

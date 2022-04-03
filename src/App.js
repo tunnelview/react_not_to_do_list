@@ -8,6 +8,13 @@ import BadList from "./components/task-list/BadList";
 import { Title } from "./components/title/Title";
 
 const App = () => {
+  const [taskList, setTaskList] = useState([]);
+
+  const addToTaskList = (newInfo) => {
+    setTaskList([...taskList, newInfo]);
+  };
+  console.log(taskList);
+
   return (
     <div className="wrapper">
       <Container>
@@ -15,7 +22,7 @@ const App = () => {
         <Title />
 
         {/* {form comp} */}
-        <AddForm />
+        <AddForm addToTaskList={addToTaskList} />
 
         <hr />
 
