@@ -57,7 +57,7 @@ const App = () => {
           </Col>
 
           <Col md="6">
-            <BadList />
+            <BadList badList={badList} />
           </Col>
         </Row>
 

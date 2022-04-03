@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Form, FormCheck, Row, Table } from "react-bootstrap";
 
-const BadList = () => {
+const BadList = ({ badList }) => {
   return (
     <div>
       <h2 className="text-center"> Bad List</h2>
@@ -9,21 +9,24 @@ const BadList = () => {
 
       <Table striped hover>
         <tbody>
-          <tr>
-            <td>
-              <FormCheck type="checkbox" label="Check me out" />
-            </td>
-            <td> Task Name</td>
-            <td>10 hr</td>
-            <td className="text-end">
-              <Button variant="warning">
-                <i className="fa-solid fa-arrow-left-long"></i>
-              </Button>
-              <Button variant="danger">
-                <i className="fa-solid fa-trash-can"></i>
-              </Button>{" "}
-            </td>
-          </tr>
+          {" "}
+          {badList.map((item, i) => (
+            <tr key={i}>
+              <td>
+                <FormCheck type="checkbox" label="Check me out" />
+              </td>
+              <td> Task Name</td>
+              <td>10 hr</td>
+              <td className="text-end">
+                <Button variant="warning">
+                  <i className="fa-solid fa-arrow-left-long"></i>
+                </Button>
+                <Button variant="danger">
+                  <i className="fa-solid fa-trash-can"></i>
+                </Button>{" "}
+              </td>
+            </tr>
+          ))}
         </tbody>
       </Table>
 
