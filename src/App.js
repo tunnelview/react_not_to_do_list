@@ -24,9 +24,7 @@ const App = () => {
           <Col md="6">
             <TaskList />
           </Col>
-        </Row>
-        {/* <TaskList /> */}
-        <Row>
+
           <Col md="6">
             <BadList />
           </Col>
