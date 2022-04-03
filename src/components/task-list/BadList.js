@@ -16,10 +16,10 @@ const BadList = () => {
             <td> Task Name</td>
             <td>10 hr</td>
             <td className="text-end">
-              <Button variant="primary">
+              <Button variant="danger">
                 <i className="fa-solid fa-arrow-left-long"></i>
               </Button>
-              <Button variant="danger">
+              <Button variant="primary">
                 <i className="fa-solid fa-trash-can"></i>
               </Button>{" "}
             </td>
