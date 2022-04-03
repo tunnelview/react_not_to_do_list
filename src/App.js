@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import { useState } from "react";
-import { Col, Container } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import "./App.css";
 import { AddForm } from "./components/form/AddForm";
 import TaskList from "./components/task-list/TaskList";
@@ -24,7 +24,7 @@ const App = () => {
             <TaskList />
           </Col>
         </Row>
-        <TaskList />
+        {/* <TaskList /> */}
       </Container>
     </div>
   );
