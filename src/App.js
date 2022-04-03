@@ -9,6 +9,7 @@ import { Title } from "./components/title/Title";
 
 const App = () => {
   const [taskList, setTaskList] = useState([]);
+  const [badList, setBadList] = useState([]);
 
   const addToTaskList = (newInfo) => {
     setTaskList([...taskList, newInfo]);
@@ -20,6 +21,18 @@ const App = () => {
     const filterdArg = taskList.filter((item, index) => index !== i);
     setTaskList(filterdArg);
     alert(i);
+  };
+
+  const shiftToBadList = (i) => {
+    // get the item that needs to be shifted
+    const item = taskList[i];
+    console.log(item);
+
+    // add the item in the bad list
+    setBadList([...badList, item]);
+
+    // remove the item from the task list
+    removeFromTaskList(i);
   };
 
   return (
@@ -39,7 +52,8 @@ const App = () => {
             <TaskList
               taskList={taskList}
               removeFromTaskList={removeFromTaskList}
-            ></TaskList>
+              shiftToBadList={shiftToBadList}
+            />
           </Col>
 
           <Col md="6">
