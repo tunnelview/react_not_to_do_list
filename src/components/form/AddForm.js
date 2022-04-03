@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 
-const initialState = {};
+const initialState = {
+  task: "",
+  hr: "",
+};
 
 export const AddForm = () => {
+  const [newInfo, setNewInfo] = useState({ initialState });
   //   const [newInfo, setTask] = useState("");
 
   //   const handleOnChange = (e) => {
@@ -22,6 +26,16 @@ export const AddForm = () => {
   //     console.log(newInfo);
   //   };
 
+  const handleOnChange = (e) => {
+    const { name, value } = e.target;
+    setNewInfo({
+      ...newInfo,
+      [name]: value,
+    });
+  };
+
+  console.log(newInfo);
+
   return (
     <div>
       {/* Line 9 to 23 is copied from 
@@ -32,7 +46,7 @@ export const AddForm = () => {
             <Form.Control
               name="task"
               placeholder="Task..."
-              //   onChange={handleOnChange}
+              onChange={handleOnChange}
               required
             />
           </Col>
@@ -41,7 +55,7 @@ export const AddForm = () => {
               placeholder="Hour"
               type="number"
               name="hr"
-              //   onChange={handleOnChange}
+              onChange={handleOnChange}
             />
           </Col>
           <Col md={2}>
