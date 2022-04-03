@@ -6,7 +6,7 @@ const initialState = {
   hr: "",
 };
 
-export const AddForm = () => {
+export const AddForm = ({ addToTaskList }) => {
   const [newInfo, setNewInfo] = useState({ initialState });
   //   const [newInfo, setTask] = useState("");
 
@@ -31,7 +31,7 @@ export const AddForm = () => {
     <div>
       {/* Line 9 to 23 is copied from 
         https://react-bootstrap.netlify.app/forms/layout/#layout Column Sizing  */}
-      <Form>
+      <Form onSubmit={handleOnSubmit}>
         <Row className="g-2">
           <Col md={7}>
             <Form.Control

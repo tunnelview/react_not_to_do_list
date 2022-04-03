@@ -29,7 +29,7 @@ const App = () => {
         {/* {Task List comp} */}
         <Row>
           <Col md="6">
-            <TaskList />
+            <TaskList taskList={taskList} />
           </Col>
 
           <Col md="6">

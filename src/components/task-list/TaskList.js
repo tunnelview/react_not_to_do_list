@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Form, FormCheck, Row, Table } from "react-bootstrap";
 
-const TaskList = () => {
+const TaskList = ({ taskList }) => {
   return (
     <div>
       <h2 className="text-center"> Task List</h2>
@@ -9,7 +9,7 @@ const TaskList = () => {
 
       <Table striped hover>
         <tbody>
-          {TaskList.map((item, i) => (
+          {taskList.map((item, i) => (
             <tr>
               <td>
                 <FormCheck type="checkbox" label="Check me out" />
