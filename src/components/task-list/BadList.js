@@ -20,7 +20,7 @@ const BadList = ({ badList, removeFromBadList, shiftToTaskList }) => {
               <td className="text-end">
                 <Button variant="warning" onClick={() => shiftToTaskList(i)}>
                   <i className="fa-solid fa-arrow-left-long"></i>
-                </Button>
+                </Button>{" "}
                 <Button variant="danger" onClick={() => removeFromBadList(i)}>
                   <i className="fa-solid fa-trash-can"></i>
                 </Button>{" "}
