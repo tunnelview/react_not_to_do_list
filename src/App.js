@@ -47,6 +47,11 @@ const App = () => {
     setTaskList([...taskList, item]);
     removeFromBadList(i);
   };
+
+  // total from the task list, we will use the reduce method, reduce method always return a number or value
+  const taskListTotalHr = taskList.reduce((acc, item) => acc + +item.hr, 0);
+  console.log(taskListTotalHr);
+
   return (
     <div className="wrapper">
       <Container>
@@ -82,6 +87,7 @@ const App = () => {
         <Row>
           <Col>
             <h3 className="mt-5"> The total allocated hours are: 15 hours </h3>
+            {/* In react the variable doesn't get updated, its readable only */}
           </Col>
         </Row>
       </Container>
