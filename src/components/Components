@@ -1,11 +1,11 @@
 Components:
 
-task area:
+#task area:
 good list
 bad list
 total hrs
 
-Features
+#Features
 2. Delete on click delete cutton
 3. switch task to bad list when you click on the arroa botton
 4. delete from the bad list
@@ -16,6 +16,7 @@ Features
 
 8.Make sure user can not add task that exceeds the total weekly hours 24*7
 
-additionals
+#additionals
 9. Make the check box to the selected for the bulk delete
-#10. local storage ***
+
+#10. local storage ***  

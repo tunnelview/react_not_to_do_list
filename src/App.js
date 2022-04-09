@@ -29,7 +29,6 @@ const App = () => {
   const removeFromBadList = (i) => {
     const filterdArg = badList.filter((item, index) => index !== i);
     setBadList(filterdArg);
-    alert(i);
   };
 
   const shiftToBadList = (i) => {
