@@ -14,11 +14,16 @@ const App = () => {
   const [badList, setBadList] = useState([]);
   console.log(taskList);
 
+  const deleteTask = () => {
+    return window.confirm("Are you sure you want to eelte this task");
+  };
+
   //remove item form the task list
   const removeFromTaskList = (i) => {
-    const filterdArg = taskList.filter((item, index) => index !== i);
-    setTaskList(filterdArg);
-    alert(i);
+    if (deleteTask()) {
+      const filterdArg = taskList.filter((item, index) => index !== i);
+      setTaskList(filterdArg);
+    }
   };
   //remove item form the bad list
   const removeFromBadList = (i) => {
