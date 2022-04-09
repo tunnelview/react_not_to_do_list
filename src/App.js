@@ -16,10 +16,16 @@ const App = () => {
   };
   console.log(taskList);
 
-  //remove item form the task
+  //remove item form the task list
   const removeFromTaskList = (i) => {
     const filterdArg = taskList.filter((item, index) => index !== i);
     setTaskList(filterdArg);
+    alert(i);
+  };
+  //remove item form the bad list
+  const removeFromBadList = (i) => {
+    const filterdArg = badList.filter((item, index) => index !== i);
+    setBadList(filterdArg);
     alert(i);
   };
 
@@ -33,6 +39,13 @@ const App = () => {
 
     // remove the item from the task list
     removeFromTaskList(i);
+
+    // remove from bad list to task list
+    const shiftToTaskList = (i) => {
+      const item = badList[i];
+      setTaskList([...taskList, item]);
+      removeFromBadList(i);
+    };
   };
 
   return (
@@ -57,7 +70,11 @@ const App = () => {
           </Col>
 
           <Col md="6">
-            <BadList badList={badList} />
+            <BadList
+              badList={badList}
+              removeFromBadList={removeFromBadList}
+              shiftToBadList={shiftToBadList}
+            />
           </Col>
         </Row>
 

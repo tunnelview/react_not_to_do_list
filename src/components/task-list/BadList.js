@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Form, FormCheck, Row, Table } from "react-bootstrap";
 
-const BadList = ({ badList }) => {
+const BadList = ({ badList, removeFromBadList, shiftToTaskList }) => {
   return (
     <div>
       <h2 className="text-center"> Bad List</h2>
@@ -18,10 +18,10 @@ const BadList = ({ badList }) => {
               <td> Task Name</td>
               <td>10 hr</td>
               <td className="text-end">
-                <Button variant="warning">
+                <Button variant="warning" onClick={() => shiftToTaskList(i)}>
                   <i className="fa-solid fa-arrow-left-long"></i>
                 </Button>
-                <Button variant="danger">
+                <Button variant="danger" onClick={() => removeFromBadList(i)}>
                   <i className="fa-solid fa-trash-can"></i>
                 </Button>{" "}
               </td>
