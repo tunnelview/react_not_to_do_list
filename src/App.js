@@ -39,15 +39,14 @@ const App = () => {
 
     // remove the item from the task list
     removeFromTaskList(i);
-
-    // remove from bad list to task list
-    const shiftToTaskList = (i) => {
-      const item = badList[i];
-      setTaskList([...taskList, item]);
-      removeFromBadList(i);
-    };
   };
+  // remove from bad list to task list
 
+  const shiftToTaskList = (i) => {
+    const item = badList[i];
+    setTaskList([...taskList, item]);
+    removeFromBadList(i);
+  };
   return (
     <div className="wrapper">
       <Container>
@@ -73,7 +72,7 @@ const App = () => {
             <BadList
               badList={badList}
               removeFromBadList={removeFromBadList}
-              shiftToBadList={shiftToBadList}
+              shiftToTaskList={shiftToTaskList}
             />
           </Col>
         </Row>
