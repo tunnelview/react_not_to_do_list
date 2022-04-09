@@ -1,7 +1,12 @@
 import React from "react";
 import { Button, Col, Form, FormCheck, Row, Table } from "react-bootstrap";
 
-const BadList = ({ badList, removeFromBadList, shiftToTaskList }) => {
+const BadList = ({
+  badList,
+  removeFromBadList,
+  shiftToTaskList,
+  badListTotalHr,
+}) => {
   return (
     <div>
       <h2 className="text-center"> Bad List</h2>
@@ -30,7 +35,9 @@ const BadList = ({ badList, removeFromBadList, shiftToTaskList }) => {
         </tbody>
       </Table>
 
-      <h4 className="mt-4 text-danger">You could have saved: 20 hrs</h4>
+      <h4 className="mt-4 text-danger">
+        You could have saved: {badListTotalHr}
+      </h4>
     </div>
   );
 };

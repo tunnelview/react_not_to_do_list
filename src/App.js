@@ -7,13 +7,11 @@ import TaskList from "./components/task-list/TaskList";
 import BadList from "./components/task-list/BadList";
 import { Title } from "./components/title/Title";
 
+const weeklyHrs = 27 * 7;
+
 const App = () => {
   const [taskList, setTaskList] = useState([]);
   const [badList, setBadList] = useState([]);
-
-  const addToTaskList = (newInfo) => {
-    setTaskList([...taskList, newInfo]);
-  };
   console.log(taskList);
 
   //remove item form the task list
@@ -50,8 +48,19 @@ const App = () => {
 
   // total from the task list, we will use the reduce method, reduce method always return a number or value
   const taskListTotalHr = taskList.reduce((acc, item) => acc + +item.hr, 0);
-  console.log(taskListTotalHr);
 
+  // total from the Bad list, we will use the reduce method, reduce method always return a number or value
+  const badListTotalHr = badList.reduce((acc, item) => acc + +item.hr, 0);
+
+  const ttlHrs = taskListTotalHr + badListTotalHr;
+
+  const addToTaskList = (newInfo) => {
+    if (ttlHrs + newInfo.hr <= weeklyHrs) {
+      setTaskList([...taskList, newInfo]);
+    } else {
+      alert("You have exceeded the weekly limit of " + weeklyHrs + "hrs");
+    }
+  };
   return (
     <div className="wrapper">
       <Container>
@@ -78,6 +87,7 @@ const App = () => {
               badList={badList}
               removeFromBadList={removeFromBadList}
               shiftToTaskList={shiftToTaskList}
+              badListTotalHr={badListTotalHr}
             />
           </Col>
         </Row>
@@ -86,7 +96,7 @@ const App = () => {
 
         <Row>
           <Col>
-            <h3 className="mt-5"> The total allocated hours are: 15 hours </h3>
+            <h3 className="mt-5">The total allocated hours are: {ttlHrs}</h3>
             {/* In react the variable doesn't get updated, its readable only */}
           </Col>
         </Row>
